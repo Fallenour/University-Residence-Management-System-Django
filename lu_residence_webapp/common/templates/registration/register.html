@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    Residence Registration
+{% endblock %}
+
+{% block intro %}
+    Create a residence account with your Lakehead identity to apply
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="{% url 'home:register' %}">
+        {% csrf_token %}
+
+        {% if form.errors %}
+        <p>There's something wrong with what you entered!</p>
+        {% endif %}
+
+        {{ form }}
+<br><br>
+        <input type="submit" value="Register" class="btn btn-success">
+        <p class="mt-5 mb-3 text-muted">&copy; Residence Management System 2021</p>
+    </form>
+{% endblock %}

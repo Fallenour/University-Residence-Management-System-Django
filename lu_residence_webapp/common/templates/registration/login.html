@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Residence Login
+{% endblock %}
+
+{% block intro %}
+    Login to your CHMSC Residence Account
+{% endblock %}
+
+{% block content %}
+
+    <style>
+        form {
+            font-size: 13px;
+        }
+        {#@media only screen and (max-width: 1000px) {#}
+        {#    #chilling {#}
+        {#        display: none;#}
+        {#    }#}
+        {##}
+        #chilling {
+            width: inherit;
+            height: inherit;
+        }
+    </style>
+
+     <div class="container-fluid d-flex" id="login">
+        <div class="row no-gutters flex-fill" >
+            <div class="col-6 col-md-4 flex-column d-flex justify-content-center text-center">
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+
+                    {% if form.errors %}
+                    <p>There's something wrong with what you entered!</p>
+                    {% endif %}
+
+                    <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
+
+                    <p> Username: {{ form.username }} </p>
+                    <p> Password: {{ form.password }} </p>
+
+                    <input type="submit" value="login" class="btn btn-success">
+                    <p class="mt-5 mb-3 text-muted">&copy; Residence Management System 2021</p>
+                </form>
+            </div>
+            <div class="col-12 col-md-8 justify-content-md-end">
+                <img id="chilling" src="{% static 'images/bg.jpg' %}">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

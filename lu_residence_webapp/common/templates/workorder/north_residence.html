@@ -1,0 +1,369 @@
+{% extends 'workorder/workorder.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="img"></div>
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h1 text-align="center" style="color:#0033cc">Work Order For Residence</h1></div>
+    </div>
+    </div>
+
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3 style="color:white">Student Name</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="fname" name="fname"><br><br></div>
+        <div style="flex-grow: 1"><h3 style="color:white">Student Id</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="id" name="identity"><br><br></div>
+    </div>
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3 style="color:white">Phone Number</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="number" name="num"><br><br></div>
+        <div style="flex-grow: 1"><h3 style="color:white">Email</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="mail" name="mail"><br><br></div>
+    </div>
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3 style="color:white">Description:</h3></div>
+        <div class="flex-container"><input type="text" style="font-size:30" id="issue" name="problem" maxlength="10000"
+                                           size="70" height="100"><br><br></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1">
+            <h3 style="color:white"> North Residence: 1st Floor (Shebandowan)</h3></option>
+
+        </div>
+
+        <div style="flex-grow: 1"><select name="iRoomID" id="iRoomID">
+            <option value="0">Select...</option>
+            <option value="2848">112B Laundry Room</option>
+            <option value="663">Apartment 100 - Bedroom 1</option>
+            <option value="664">Apartment 100 - Bedroom 2</option>
+            <option value="665">Apartment 100 - Bedroom 3</option>
+            <option value="666">Apartment 100 - Bedroom 4</option>
+            <option value="661">Apartment 100 - Common Area</option>
+            <option value="2290">Apartment 100 - Large Bathroom</option>
+            <option value="662">Apartment 100 - Small Bathroom</option>
+            <option value="669">Apartment 101 - Bedroom 1</option>
+            <option value="670">Apartment 101 - Bedroom 2</option>
+            <option value="671">Apartment 101 - Bedroom 3</option>
+            <option value="672">Apartment 101 - Bedroom 4</option>
+            <option value="667">Apartment 101 - Common Area</option>
+            <option value="2291">Apartment 101 - Large Bathroom</option>
+            <option value="668">Apartment 101 - Small Bathroom</option>
+            <option value="675">Apartment 102 - Bedroom 1</option>
+            <option value="676">Apartment 102 - Bedroom 2</option>
+            <option value="677">Apartment 102 - Bedroom 3</option>
+            <option value="678">Apartment 102 - Bedroom 4</option>
+            <option value="673">Apartment 102 - Common Area</option>
+            <option value="2292">Apartment 102 - Large Bathroom</option>
+            <option value="674">Apartment 102 - Small Bathroom</option>
+            <option value="681">Apartment 103 - Bedroom 1</option>
+            <option value="682">Apartment 103 - Bedroom 2</option>
+            <option value="683">Apartment 103 - Bedroom 3</option>
+            <option value="684">Apartment 103 - Bedroom 4</option>
+            <option value="679">Apartment 103 - Common Area</option>
+            <option value="2293">Apartment 103 - Large Bathroom</option>
+            <option value="680">Apartment 103 - Small Bathroom</option>
+            <option value="687">Apartment 104 - Bedroom 1</option>
+            <option value="688">Apartment 104 - Bedroom 2</option>
+            <option value="689">Apartment 104 - Bedroom 3</option>
+            <option value="690">Apartment 104 - Bedroom 4</option>
+            <option value="685">Apartment 104 - Common Area</option>
+            <option value="2294">Apartment 104 - Large Bathroom</option>
+            <option value="686">Apartment 104 - Small Bathroom</option>
+            <option value="693">Apartment 105 - Bedroom 1</option>
+            <option value="694">Apartment 105 - Bedroom 2</option>
+            <option value="695">Apartment 105 - Bedroom 3</option>
+            <option value="696">Apartment 105 - Bedroom 4</option>
+            <option value="691">Apartment 105 - Common Area</option>
+            <option value="2295">Apartment 105 - Large Bathroom</option>
+            <option value="692">Apartment 105 - Small Bathroom</option>
+            <option value="699">Apartment 106 - Bedroom 1</option>
+            <option value="700">Apartment 106 - Bedroom 2</option>
+            <option value="701">Apartment 106 - Bedroom 3</option>
+            <option value="702">Apartment 106 - Bedroom 4</option>
+            <option value="697">Apartment 106 - Common Area</option>
+            <option value="2296">Apartment 106 - Large Bathroom</option>
+            <option value="698">Apartment 106 - Small Bathroom</option>
+            <option value="705">Apartment 107 - Bedroom 1</option>
+            <option value="706">Apartment 107 - Bedroom 2</option>
+            <option value="707">Apartment 107 - Bedroom 3</option>
+            <option value="708">Apartment 107 - Bedroom 4</option>
+            <option value="703">Apartment 107 - Common Area</option>
+            <option value="2297">Apartment 107 - Large Bathroom</option>
+            <option value="704">Apartment 107 - Small Bathroom</option>
+            <option value="711">Apartment 108 - Bedroom 1</option>
+            <option value="712">Apartment 108 - Bedroom 2</option>
+            <option value="713">Apartment 108 - Bedroom 3</option>
+            <option value="714">Apartment 108 - Bedroom 4</option>
+            <option value="709">Apartment 108 - Common Area</option>
+            <option value="2298">Apartment 108 - Large Bathroom</option>
+            <option value="710">Apartment 108 - Small Bathroom</option>
+            <option value="717">Apartment 109 - Bedroom 1</option>
+            <option value="718">Apartment 109 - Bedroom 2</option>
+            <option value="719">Apartment 109 - Bedroom 3</option>
+            <option value="720">Apartment 109 - Bedroom 4</option>
+            <option value="715">Apartment 109 - Common Area</option>
+            <option value="2299">Apartment 109 - Large Bathroom</option>
+            <option value="716">Apartment 109 - Small Bathroom</option>
+            <option value="723">Apartment 110 - Bedroom 1</option>
+            <option value="724">Apartment 110 - Bedroom 2</option>
+            <option value="725">Apartment 110 - Bedroom 3</option>
+            <option value="726">Apartment 110 - Bedroom 4</option>
+            <option value="721">Apartment 110 - Common Area</option>
+            <option value="2300">Apartment 110 - Large Bathroom</option>
+            <option value="722">Apartment 110 - Small Bathroom</option>
+            <option value="729">Apartment 111 - Bedroom 1</option>
+            <option value="730">Apartment 111 - Bedroom 2</option>
+            <option value="731">Apartment 111 - Bedroom 3</option>
+            <option value="732">Apartment 111 - Bedroom 4</option>
+            <option value="727">Apartment 111 - Common Area</option>
+            <option value="2301">Apartment 111 - Large Bathroom</option>
+            <option value="728">Apartment 111 - Small Bathroom</option>
+            <option value="2381">Apartment 112 - Student Lounge</option>
+            <option value="2598">Apartment 113 - Accessible Washroom</option>
+            <option value="2383">Apartment 114 - Storage area</option>
+            <option value="2599">Apartment 115 - Mechanical (Hot Water)</option>
+            <option value="2849">Multiple Shebandowan Units</option>
+            <option value="2821">North - WHOLE BUILDING</option>
+            <option value="2578">X100 - Left Fire Exit</option>
+            <option value="2508">X101 - Left Hallway (100-105)</option>
+            <option value="2380">X102 - Central Hallway</option>
+            <option value="2382">X103 - Main Stairwell</option>
+            <option value="2378">X104 - Elevator Landing</option>
+            <option value="2577">X104A - Elevator</option>
+            <option value="2377">X105 - Main Entrance/Mail Boxes</option>
+            <option value="2576">X106 - Right Hallway (106-111)</option>
+            <option value="2579">X107 - Right Fire Exit</option>
+        </select></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1">
+            <h3 style="color:white"> North Residence: 2nd Floor (Armstrong)</h3>
+        </div>
+
+        <div style="flex-grow: 1"><select name="iRoomID" id="iRoomID">
+            <option value="0">Select...</option>
+            <option value="735">Apartment 200 - Bedroom 1</option>
+            <option value="736">Apartment 200 - Bedroom 2</option>
+            <option value="737">Apartment 200 - Bedroom 3</option>
+            <option value="738">Apartment 200 - Bedroom 4</option>
+            <option value="733">Apartment 200 - Common Area</option>
+            <option value="2302">Apartment 200 - Large Bathroom</option>
+            <option value="734">Apartment 200 - Small Bathroom</option>
+            <option value="741">Apartment 201 - Bedroom 1</option>
+            <option value="742">Apartment 201 - Bedroom 2</option>
+            <option value="743">Apartment 201 - Bedroom 3</option>
+            <option value="744">Apartment 201 - Bedroom 4</option>
+            <option value="739">Apartment 201 - Common Area</option>
+            <option value="2303">Apartment 201 - Large Bathroom</option>
+            <option value="740">Apartment 201 - Small Bathroom</option>
+            <option value="747">Apartment 202 - Bedroom 1</option>
+            <option value="748">Apartment 202 - Bedroom 2</option>
+            <option value="749">Apartment 202 - Bedroom 3</option>
+            <option value="750">Apartment 202 - Bedroom 4</option>
+            <option value="745">Apartment 202 - Common Area</option>
+            <option value="2304">Apartment 202 - Large Bathroom</option>
+            <option value="746">Apartment 202 - Small Bathroom</option>
+            <option value="753">Apartment 203 - Bedroom 1</option>
+            <option value="754">Apartment 203 - Bedroom 2</option>
+            <option value="755">Apartment 203 - Bedroom 3</option>
+            <option value="756">Apartment 203 - Bedroom 4</option>
+            <option value="751">Apartment 203 - Common Area</option>
+            <option value="2305">Apartment 203 - Large Bathroom</option>
+            <option value="752">Apartment 203 - Small Bathroom</option>
+            <option value="759">Apartment 204 - Bedroom 1</option>
+            <option value="760">Apartment 204 - Bedroom 2</option>
+            <option value="761">Apartment 204 - Bedroom 3</option>
+            <option value="762">Apartment 204 - Bedroom 4</option>
+            <option value="757">Apartment 204 - Common Area</option>
+            <option value="2306">Apartment 204 - Large Bathroom</option>
+            <option value="758">Apartment 204 - Small Bathroom</option>
+            <option value="765">Apartment 205 - Bedroom 1</option>
+            <option value="766">Apartment 205 - Bedroom 2</option>
+            <option value="767">Apartment 205 - Bedroom 3</option>
+            <option value="768">Apartment 205 - Bedroom 4</option>
+            <option value="763">Apartment 205 - Common Area</option>
+            <option value="2307">Apartment 205 - Large Bathroom</option>
+            <option value="764">Apartment 205 - Small Bathroom</option>
+            <option value="771">Apartment 206 - Bedroom 1</option>
+            <option value="772">Apartment 206 - Bedroom 2</option>
+            <option value="773">Apartment 206 - Bedroom 3</option>
+            <option value="774">Apartment 206 - Bedroom 4</option>
+            <option value="769">Apartment 206 - Common Area</option>
+            <option value="2308">Apartment 206 - Large Bathroom</option>
+            <option value="770">Apartment 206 - Small Bathroom</option>
+            <option value="777">Apartment 207 - Bedroom 1</option>
+            <option value="778">Apartment 207 - Bedroom 2</option>
+            <option value="779">Apartment 207 - Bedroom 3</option>
+            <option value="780">Apartment 207 - Bedroom 4</option>
+            <option value="775">Apartment 207 - Common Area</option>
+            <option value="2309">Apartment 207 - Large Bathroom</option>
+            <option value="776">Apartment 207 - Small Bathroom</option>
+            <option value="783">Apartment 208 - Bedroom 1</option>
+            <option value="784">Apartment 208 - Bedroom 2</option>
+            <option value="785">Apartment 208 - Bedroom 3</option>
+            <option value="786">Apartment 208 - Bedroom 4</option>
+            <option value="781">Apartment 208 - Common Area</option>
+            <option value="2310">Apartment 208 - Large Bathroom</option>
+            <option value="782">Apartment 208 - Small Bathroom</option>
+            <option value="789">Apartment 209 - Bedroom 1</option>
+            <option value="790">Apartment 209 - Bedroom 2</option>
+            <option value="791">Apartment 209 - Bedroom 3</option>
+            <option value="792">Apartment 209 - Bedroom 4</option>
+            <option value="787">Apartment 209 - Common Area</option>
+            <option value="2311">Apartment 209 - Large Bathroom</option>
+            <option value="788">Apartment 209 - Small Bathroom</option>
+            <option value="795">Apartment 210 - Bedroom 1</option>
+            <option value="796">Apartment 210 - Bedroom 2</option>
+            <option value="797">Apartment 210 - Bedroom 3</option>
+            <option value="798">Apartment 210 - Bedroom 4</option>
+            <option value="793">Apartment 210 - Common Area</option>
+            <option value="2312">Apartment 210 - Large Bathroom</option>
+            <option value="794">Apartment 210 - Small Bathroom</option>
+            <option value="801">Apartment 211 - Bedroom 1</option>
+            <option value="802">Apartment 211 - Bedroom 2</option>
+            <option value="803">Apartment 211 - Bedroom 3</option>
+            <option value="804">Apartment 211 - Bedroom 4</option>
+            <option value="799">Apartment 211 - Common Area</option>
+            <option value="2313">Apartment 211 - Large Bathroom</option>
+            <option value="800">Apartment 211 - Small Bathroom</option>
+            <option value="2372">Apartment 212 - Student Lounge</option>
+            <option value="2597">Apartment 213 - Accessible Washroom</option>
+            <option value="2583">Apartment 214 - Storage</option>
+            <option value="2438">Apartment 215 - Mechanical Room</option>
+            <option value="2976">Armstrong Whole House</option>
+            <option value="2973">Multiple Armstrong Apartments</option>
+            <option value="2974">Multiple Armstrong Bedrooms</option>
+            <option value="2580">X200 - Left Fire Exit</option>
+            <option value="2582">X201 - Left Hallway (201-205)</option>
+            <option value="2581">X202 - Central Hallway</option>
+            <option value="2584">X203 - Mechanical (HRV)</option>
+            <option value="2585">X203A - Mechanical (HRV)</option>
+            <option value="2384">X204 - Elevator landing</option>
+            <option value="2586">X204A - Elevator</option>
+            <option value="2385">X204B - Main Stairwell</option>
+            <option value="2588">X205 - Right Hallway (206-211)</option>
+            <option value="2587">X206 - Right Fire Exit</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3 style="color:white">North Residence: 3rd Floor (Upsala)</h3></div>
+
+        <div style="flex-grow: 1">
+
+            <select name="iRoomID" id="iRoomID">
+                <option value="0">Select...</option>
+                <option value="807">Apartment 300 - Bedroom 1</option>
+                <option value="808">Apartment 300 - Bedroom 2</option>
+                <option value="809">Apartment 300 - Bedroom 3</option>
+                <option value="810">Apartment 300 - Bedroom 4</option>
+                <option value="805">Apartment 300 - Common Area</option>
+                <option value="2314">Apartment 300 - Large Bathroom</option>
+                <option value="806">Apartment 300 - Small Bathroom</option>
+                <option value="813">Apartment 301 - Bedroom 1</option>
+                <option value="814">Apartment 301 - Bedroom 2</option>
+                <option value="815">Apartment 301 - Bedroom 3</option>
+                <option value="816">Apartment 301 - Bedroom 4</option>
+                <option value="811">Apartment 301 - Common Area</option>
+                <option value="2315">Apartment 301 - Large Bathroom</option>
+                <option value="812">Apartment 301 - Small Bathroom</option>
+                <option value="819">Apartment 302 - Bedroom 1</option>
+                <option value="820">Apartment 302 - Bedroom 2</option>
+                <option value="821">Apartment 302 - Bedroom 3</option>
+                <option value="822">Apartment 302 - Bedroom 4</option>
+                <option value="817">Apartment 302 - Common Area</option>
+                <option value="2316">Apartment 302 - Large Bathroom</option>
+                <option value="818">Apartment 302 - Small Bathroom</option>
+                <option value="825">Apartment 303 - Bedroom 1</option>
+                <option value="826">Apartment 303 - Bedroom 2</option>
+                <option value="827">Apartment 303 - Bedroom 3</option>
+                <option value="828">Apartment 303 - Bedroom 4</option>
+                <option value="823">Apartment 303 - Common Area</option>
+                <option value="2317">Apartment 303 - Large Bathroom</option>
+                <option value="824">Apartment 303 - Small Bathroom</option>
+                <option value="831">Apartment 304 - Bedroom 1</option>
+                <option value="832">Apartment 304 - Bedroom 2</option>
+                <option value="833">Apartment 304 - Bedroom 3</option>
+                <option value="834">Apartment 304 - Bedroom 4</option>
+                <option value="829">Apartment 304 - Common Area</option>
+                <option value="2318">Apartment 304 - Large Bathroom</option>
+                <option value="830">Apartment 304 - Small Bathroom</option>
+                <option value="837">Apartment 305 - Bedroom 1</option>
+                <option value="838">Apartment 305 - Bedroom 2</option>
+                <option value="839">Apartment 305 - Bedroom 3</option>
+                <option value="840">Apartment 305 - Bedroom 4</option>
+                <option value="835">Apartment 305 - Common Area</option>
+                <option value="2319">Apartment 305 - Large Bathroom</option>
+                <option value="836">Apartment 305 - Small Bathroom</option>
+                <option value="843">Apartment 306 - Bedroom 1</option>
+                <option value="844">Apartment 306 - Bedroom 2</option>
+                <option value="845">Apartment 306 - Bedroom 3</option>
+                <option value="846">Apartment 306 - Bedroom 4</option>
+                <option value="841">Apartment 306 - Common Area</option>
+                <option value="2320">Apartment 306 - Large Bathroom</option>
+                <option value="842">Apartment 306 - Small Bathroom</option>
+                <option value="849">Apartment 307 - Bedroom 1</option>
+                <option value="850">Apartment 307 - Bedroom 2</option>
+                <option value="851">Apartment 307 - Bedroom 3</option>
+                <option value="852">Apartment 307 - Bedroom 4</option>
+                <option value="847">Apartment 307 - Common Area</option>
+                <option value="2321">Apartment 307 - Large Bathroom</option>
+                <option value="848">Apartment 307 - Small Bathroom</option>
+                <option value="855">Apartment 308 - Bedroom 1</option>
+                <option value="856">Apartment 308 - Bedroom 2</option>
+                <option value="857">Apartment 308 - Bedroom 3</option>
+                <option value="858">Apartment 308 - Bedroom 4</option>
+                <option value="853">Apartment 308 - Common Area</option>
+                <option value="2322">Apartment 308 - Large Bathroom</option>
+                <option value="854">Apartment 308 - Small Bathroom</option>
+                <option value="861">Apartment 309 - Bedroom 1</option>
+                <option value="862">Apartment 309 - Bedroom 2</option>
+                <option value="863">Apartment 309 - Bedroom 3</option>
+                <option value="864">Apartment 309 - Bedroom 4</option>
+                <option value="859">Apartment 309 - Common Area</option>
+                <option value="2323">Apartment 309 - Large Bathroom</option>
+                <option value="860">Apartment 309 - Small Bathroom</option>
+                <option value="867">Apartment 310 - Bedroom 1</option>
+                <option value="868">Apartment 310 - Bedroom 2</option>
+                <option value="869">Apartment 310 - Bedroom 3</option>
+                <option value="870">Apartment 310 - Bedroom 4</option>
+                <option value="865">Apartment 310 - Common Area</option>
+                <option value="2324">Apartment 310 - Large Bathroom</option>
+                <option value="866">Apartment 310 - Small Bathroom</option>
+                <option value="873">Apartment 311 - Bedroom 1</option>
+                <option value="874">Apartment 311 - Bedroom 2</option>
+                <option value="875">Apartment 311 - Bedroom 3</option>
+                <option value="876">Apartment 311 - Bedroom 4</option>
+                <option value="871">Apartment 311 - Common Area</option>
+                <option value="2325">Apartment 311 - Large Bathroom</option>
+                <option value="872">Apartment 311 - Small Bathroom</option>
+                <option value="2430">Apartment 312 - Student Lounge</option>
+                <option value="2594">Apartment 313 - Accessible Washroom</option>
+                <option value="2590">Apartment 314 - Storage</option>
+                <option value="2847">Laundry Room</option>
+                <option value="2844">Multiple Upsala Bedrooms</option>
+                <option value="2591">X300 - Left Fire Exit</option>
+                <option value="2592">X301 - Left Hallway (300-305)</option>
+                <option value="2593">X302 - Central Hallway</option>
+                <option value="2589">X303 - Mechanical (Electrical)</option>
+                <option value="2415">X304 - Elevator Landing</option>
+                <option value="2386">X304A - Elevator</option>
+                <option value="2387">X304B - Main Stairs</option>
+                <option value="2595">X305 - Right Hallway (306-311)</option>
+                <option value="2596">X306 - Right Fire Exit</option>
+            </select>
+
+        </div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 3" align="center">
+            <button class="button button3">SUBMIT</button>
+        </div>
+    </div>
+{% endblock %}

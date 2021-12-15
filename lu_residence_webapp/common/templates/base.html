@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href={% static "bootstrap/css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href="{% static "styles/base.css" %}">
+    <title>{% block title %}CHMSC Residence{% endblock %}</title>
+</head>
+
+<body>
+
+    <div role="banner" id="top">
+        <div class="container-fluid" >
+            <a class="logo" href="{% url 'home:news' %}">
+                <img src="{% static "images/chmsc.jpg" %}" alt="Lakehead logo" width="70" height="70">
+            </a>
+            <p class="meta">CHMSC Residence</p>
+
+            <div role="navigation" class="container-fluid" id="nav-links">
+                {% if user.is_authenticated %}
+                    <ul>
+                    <li>
+                        <a href="{% url 'home:news' %}">News</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:housing' %}">Housing</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:fees' %}">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:apply' %}">Apply</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:work_order' %}">Work Order</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:faq' %}">FAQ</a>
+                    </li>
+                    {% if user.is_authenticated and user.groups %}
+                        <li>
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+                {% if not user.is_authenticated %}
+                    <ul>
+                    <li>
+                        <a href="{% url 'home:landing' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:housing' %}">Housing</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:fees' %}">Pricing</a>
+                    </li>
+                    <li>
+                         <a href="{% url 'home:faq' %}">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:register' %}">Register</a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-banner">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p id="pageIntro">
+                    {% block intro %}
+                    {% endblock %}
+                </p>
+            </div>
+            <div class="col" >
+                {% if user.is_authenticated %}
+                    <p class="text-right" id="userCol">
+                        {{ user.username }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+{% block content %}
+{% endblock %}
+
+
+    <script src={% static "bootstrap/js/bootstrap.min.js" %}></script>
+{#    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>#}
+{#    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>#}
+</body>
+</html>

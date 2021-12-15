@@ -1,0 +1,147 @@
+{% extends 'workorder/workorder.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="img"></div>
+
+
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h1 text-align="center" style="color:#0033cc">Work Order For Residence</h1></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3 style="color:white">Student Name</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="fname" name="fname"><br><br></div>
+        <div style="flex-grow: 1"><h3 style="color:white">Student Id</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="id" name="identity"><br><br></div>
+    </div>
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3 style="color:white">Phone Number</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="number" name="num"><br><br></div>
+        <div style="flex-grow: 1"><h3 style="color:white">Email</h3></div>
+        <div style="flex-grow: 1"><input type="text" id="mail" name="mail"><br><br></div>
+    </div>
+
+    <div class="flex-container">
+        <div style="flex-grow: 1"><h3 style="color:white">Description:</h3></div>
+        <div class="flex-container"><input type="text" style="font-size:30" id="issue" name="problem" maxlength="10000"
+                                           size="70" height="100"><br><br></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1" align="center"><h1 align="center" style="color:white">BEARSKIN</h1></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1" align="center">
+            <h3 style="color:white"> HOUSE</h3>
+            <select name="Townhouse Location" id="loc">
+                <option value="0">SELECT</option>
+                <option value="1">Common Area</option>
+                <option value="2">Kakabeka</option>
+                <option value="3">Lansdowne</option>
+                <option value="4">Ogoki</option>
+                <option value="5">Ouimet</option>
+                <option value="6">Rocky Bay</option>
+                <option value="7">Silver Islet</option>
+            </select></div>
+
+        <div align="center"><h3 style="color:white">HOUSE NUMBER</h3>   <select name="House Number" id="loc">
+            <option value="0">SELECT</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select></div>
+        <div style="flex-grow: 1" align="center"><h3 style="color:white"> ROOM NO</h3> <select name="Room Number"
+                                                                                               id="room">
+            <option value="0">SELECT</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">Common Space</option>
+            <option value="6">Kitchen</option>
+            <option value="7">Toilet</option>
+        </select></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1" align="center"><h1 align="center" style="color:white">DEER LAKE RIDGE</h1></div>
+    </div>
+    <div class="flex-container" align="center">
+        <div style="flex-grow: 1" align="center">
+            <h3 style="color:white"> HOUSE</h3>
+            <select name="Location" id="loc">
+                <option value="0">SELECT</option>
+                <option value="55">Common Area</option>
+                <option value="16">Eagle River</option>
+                <option value="13">Minaki</option>
+                <option value="12">Quetico</option>
+                <option value="14">Red Rock</option>
+                <option value="15">Rossport</option>
+                <option value="11">Sandy Lake</option>
+            </select></div>
+
+        <div align="center"><h3 style="color:white">HOUSE NUMBER</h3><select name="House Number" id="loc">
+            <option value="0">SELECT</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select></div>
+        <div style="flex-grow: 1"><h3 style="color:white"> ROOM NO</h3><select name="Room Number" id="room">
+            <option value="0">SELECT</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">Common Space</option>
+            <option value="6">Kitchen</option>
+            <option value="7">Toilet</option>
+        </select></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1" align="center"><h1 align="center" style="color:white">NORTH SPIRIT HEIGHTS</h1></div>
+    </div>
+    <div class="flex-container" align="center">
+        <div style="flex-grow: 1"><h3 style="color:white"> HOUSE</h3>
+            <select name="Location" id="loc">
+                <option value="0">SELECT</option>
+                <option value="8"> Beardmore</option>
+                <option value="54"> Common Area</option>
+                <option value="6">Ignace</option>
+                <option value="7"> Keewatin</option>
+                <option value="5">Nakina</option>
+                <option value="10">Wabigoon</option>
+                <option value="9">White River</option>
+            </select></div>
+        <div style><h3 style="color:white">HOUSE NUMBER</h3>  <select name="House Number" id="loc">
+            <option value="0">SELECT</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select></div>
+        <div style="flex-grow: 1"><h3 style="color:white"> ROOM NO</h3><select name="Room Number" id="room">
+            <option value="0">SELECT</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">Common Space</option>
+            <option value="6">Kitchen</option>
+            <option value="7">Toilet</option>
+        </select></div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 3" align="center">
+            <button class="button button3">SUBMIT</button>
+        </div>
+    </div>
+
+{% endblock %}

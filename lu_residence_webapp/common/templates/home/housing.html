@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    CHMSC Housing
+{% endblock %}
+{% block intro %}
+    Welcome to CHMSC Housing
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid" >
+        <div class="row featurette">
+
+        <h1>WELCOME TO HOUSING!!!</h1>
+        <p class="lead">CHMSC University Residence is a bustling environment comprised of 1,200 students from all over the world.<br>
+
+            Accommodations at CHMSC are divided into three living styles: residence halls, apartments and townhouses. Each style provides a unique environment allowing students to experience freedom while receiving the academic and social support that they need to be successful. All of the residences maintain a sense of community, and strive to provide a safe and healthy atmosphere for all of its members.</p>
+    </div>
+
+<style>
+        form {
+            font-size: 13px;
+        }
+        {#@media only screen and (max-width: 100px) {#}
+        {#    #chilling {#}
+        {#        display: none;#}
+        {#    }#}
+        {##}
+        #chilling {
+            width: inherit;
+            height: inherit;
+        }
+
+        #slider figure{
+        overflow: hidden;
+        }
+        #slider figure {
+        position: relative;
+        width: 400%;
+        margin: 0;
+        left: 0;
+        animation: 10s slider infinite;
+        }
+        #slider figure img {
+        width: 20%;
+        float: left;
+        }
+        @keyframes slider{
+         0%{
+         left:0;
+         }
+         20% {
+         left:0;
+         }
+         25% {
+         left:-100%;
+         }
+         45% {
+         left:-100%;
+         }
+         50% {
+         left:-200%;
+         }
+         70% {
+         left:-200%;
+         }
+         75% {
+         left:-300%;
+         }
+         95% {
+         left:-300%;
+         }
+        }
+            #slider1 figure{
+        overflow: hidden;
+        }
+        #slider1 figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: 10s slider infinite;
+        }
+        #slider1 figure img {
+        width: 20%;
+        float: right;
+        }
+            @keyframes slider1{
+         0%{
+         right:0;
+         }
+         20% {
+         right:0;
+         }
+         25% {
+         right:+100%;
+         }
+         45% {
+         right:+100%;
+         }
+         50% {
+         right:+200%;
+         }
+         70% {
+         right:+200%;
+         }
+         75% {
+         right:+300%;
+         }
+         95% {
+         right:+300%;
+         }
+        }
+    </style>
+
+
+
+<hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">The Town House <span class="text-muted"></span></h2>
+        <p class="lead">Townhouses provide students with the sense of living off-campus but with all the conveniences of living on campus. Our townhouses are reserved for upper-year students with certain units designated as accessible. Optional meal plans are available for your convenience.
+
+All townhouse units are smoke-free.  Smoking is only permitted in designated outside locations.</p>
+      </div>
+      <div class="col-md-5">
+          <div id="slider" >
+              <figure>
+                  <img src="{% static 'images/th/townhouse.png' %}" alt="townhouse image" width=30% height="350" >
+                <img src="{% static 'images/th/4 bedroom exterior.png' %}" alt="townhouse image" width=30% height="350" > 
+                  <img src="{% static 'images/th/townhouse accessible.png' %}" alt="townhouse image" width=30% height="350" >
+                  <img src="{% static 'images/th/townhouse_room-access-large.png' %}" alt="townhouse image"  width=30%       height="350">
+                  
+            
+              </figure>
+          </div>
+
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">The Residence Halls</h2>
+        <p class="lead">CHMSC University Residence is a bustling environment comprised of 1,200 students from all over the world.
+
+                        Accommodations at CHMSC are divided into three living styles: residence halls, apartments and townhouses. Each style provides a unique environment allowing students to experience freedom while receiving the academic and social support that they need to be successful. All of the residences maintain a sense of community, and strive to provide a safe and healthy atmosphere for all of its members.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+          <img src="{% static 'images/townhall.png' %}" alt="townhall image" width=100% height="400">
+       
+      </div>
+    </div>
+     <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-1">
+          
+        <h2 class="featurette-heading">The Apartments </h2>
+        <p class="lead">North and South apartments are situated between Enclaro Hall Residence and Jomel Residence. These apartments house upper-year students with certain units designated as accessible. Optional meal plans are available for your convenience.</p>
+      </div>
+        
+      <div class="col-md-5 order-md-1">
+    
+          <div id="slider" >
+              <figure>
+                  <img src="{% static 'images/ap/1.png' %}" alt="townhouse image" width=30% height="350" >
+                <img src="{% static 'images/ap/2.png' %}" alt="townhouse image" width=30% height="350" > 
+                  <img src="{% static 'images/ap/3.png' %}" alt="townhouse image" width=30% height="350" >
+                  <img src="{% static 'images/ap/4.png' %}" alt="townhouse image"  width=30% height="350">
+              </figure>
+          </div>
+
+
+      </div>
+    </div>
+        
+      </div>
+    </div>
+
+{% endblock %}
